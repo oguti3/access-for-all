@@ -15,4 +15,9 @@ public class EnterBuilding : MonoBehaviour
     {
         
     }
+
+    void onCollision()
+    {
+
+    }
 }
