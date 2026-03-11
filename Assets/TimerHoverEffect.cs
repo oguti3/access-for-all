@@ -8,14 +8,12 @@ public class TimerHoverEffect : MonoBehaviour
     [SerializeField] float hoveredFontSize = 36f;
 
     TextMeshPro timerText;
-    Timer timerScript;
     bool isHovered = false;
 
     void Start()
     {
         timerText = GetComponent<TextMeshPro>();
-        timerScript = GetComponent<Timer>();
-        timerText.color = normalColor;
+        timerText.faceColor = normalColor;
         timerText.alignment = TextAlignmentOptions.Center;
     }
 
@@ -28,8 +26,7 @@ public class TimerHoverEffect : MonoBehaviour
     {
         if (isHovered)
         {
-            timerScript.enabled = false;
-            timerText.color = hoverColor;
+            timerText.faceColor = hoverColor;
             timerText.text = "\u221E";
             timerText.fontSize = hoveredFontSize;
             timerText.alignment = TextAlignmentOptions.Center;
