@@ -219452,6 +219452,8 @@ GameObject:
   - component: {fileID: 1249032836}
   - component: {fileID: 1249032835}
   - component: {fileID: 1249032834}
+  - component: {fileID: 1249032841}
+  - component: {fileID: 1249032840}
   m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -219471,7 +219473,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71e96de35b6eca943baf5444f961aee1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timerText: {fileID: 0}
+  timerText: {fileID: 1249032835}
   remainingTime: 30
 --- !u!114 &1249032835
 MonoBehaviour:
@@ -219645,17 +219647,45 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1249032833}
   m_LocalRotation: {x: -0, y: 0.99976134, z: -0, w: 0.02185008}
-  m_LocalPosition: {x: 0, y: 0, z: -158.85}
-  m_LocalScale: {x: 0.2130122, y: 0.2130122, z: 0.2130122}
+  m_LocalPosition: {x: 0, y: 0, z: -159.632}
+  m_LocalScale: {x: 0.079343244, y: 0.079343244, z: 0.079343244}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1760
   m_LocalEulerAnglesHint: {x: 0, y: 177.496, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -86.28, y: 72.97}
+  m_AnchoredPosition: {x: -86.634, y: 72.671}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1249032840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1249032833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dbac4e0bbcac784c9d8b8cf64c662d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  normalColor: {r: 1, g: 0, b: 0, a: 1}
+  hoverColor: {r: 0, g: 1, b: 0, a: 1}
+  hoveredFontSize: 36
+--- !u!65 &1249032841
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1249032833}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 9.926751, y: 2.6581395, z: 0.000000036980005}
+  m_Center: {x: -4.9633756, y: 0.4758993, z: -0.000000018490002}
 --- !u!1001 &1249083399
 PrefabInstance:
   m_ObjectHideFlags: 0
