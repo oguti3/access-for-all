@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MoveGrocery : MonoBehaviour
+public class MoveGrocery : CAVE2Interactable
 {
     bool isHovered = false;
     int count = 0;
