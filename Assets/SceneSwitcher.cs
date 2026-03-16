@@ -5,12 +5,13 @@ public class SceneSwitcher : MonoBehaviour
 {
     public string sceneName;
 
-    public string triggeringTag = "Player";
+    public string triggeringTag;
 
     private void OnTriggerEnter(Collider other) // For 3D collisions
     {
         if (other.CompareTag(triggeringTag))
         {
+            Debug.Log("ontriggerenter success");
             LoadScene();
         }
     }
@@ -19,6 +20,7 @@ public class SceneSwitcher : MonoBehaviour
     {
         if (other.CompareTag(triggeringTag))
         {
+            Debug.Log("ontriggerenter2d success");
             LoadScene();
         }
     }
