@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/full-scene.unity
+    guid: 877b796bd78ebb94ab1e5c34dee80fcd
+  - enabled: 1
+    path: Assets/grocery-scene.unity
+    guid: 2db11ce420216e74fa4e9fb694c142af
   m_configObjects: {}
