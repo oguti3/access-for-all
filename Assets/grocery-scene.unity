@@ -1262,6 +1262,27 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: e1d647a2b1b06dc4da7fa74589be2021, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 99d5354982062ab438a031e70dd15ed1, type: 3}
+--- !u!1 &103028037 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: a60646baa8e4c05408355fc002aa1a93,
+    type: 3}
+  m_PrefabInstance: {fileID: 1812734403}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &103028038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 103028037}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37f05da477a79564da216e84b69783d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 2
+  moveDistance: 5
+  shelfScript: {fileID: 0}
 --- !u!1001 &106708877
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7812,6 +7833,27 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.04083653, y: 0.023232209, z: 0.0024493842}
   m_Center: {x: -0.02031061, y: 0.0045835045, z: -0.0005689692}
+--- !u!1 &752144898 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: aa1e50a95407617438f356239e4e8128,
+    type: 3}
+  m_PrefabInstance: {fileID: 822130808}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &752144899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 752144898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37f05da477a79564da216e84b69783d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 2
+  moveDistance: 5
+  shelfScript: {fileID: 0}
 --- !u!1001 &753872990
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8350,7 +8392,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: aa1e50a95407617438f356239e4e8128,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.05
+      value: -5.75
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: aa1e50a95407617438f356239e4e8128,
         type: 3}
@@ -8590,6 +8632,10 @@ PrefabInstance:
     - target: {fileID: 109788, guid: 242e3d1f67b660a438a44ced60ad78d8, type: 3}
       propertyPath: m_Name
       value: shopping_basket
+      objectReference: {fileID: 0}
+    - target: {fileID: 109788, guid: 242e3d1f67b660a438a44ced60ad78d8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 412524, guid: 242e3d1f67b660a438a44ced60ad78d8, type: 3}
       propertyPath: m_LocalPosition.x

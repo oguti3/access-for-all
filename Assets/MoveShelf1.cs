@@ -5,8 +5,7 @@ using UnityEngine;
 public class MoveShelf1 : CAVE2Interactable
 {
     int count = 0;
-    bool hasMoved = false;
-    bool isPointing = false; // back to manual flag
+    bool hasMoved, isPointing, startMovement = false; // back to manual flag
 
     WandPointer wandPointer;
 
@@ -27,18 +26,29 @@ public class MoveShelf1 : CAVE2Interactable
 
         if (wandPointer == null) return;
 
-        if (wandPointer.laserActivated && isPointing && !hasMoved)
+        if (wandPointer.laserActivated && isPointing)
         {
-            if (count < 120)
+            startMovement = true;
+        }
+
+        if (startMovement && !hasMoved)
+        {
+            if (count < 10)
             {
                 count++;
-                Debug.Log(gameObject.name + " count: " + count);
+               // Debug.Log(gameObject.name + " count: " + count);
             }
             else
             {
-                Debug.Log(gameObject.name + " MOVING NOW");
-                transform.position += new Vector3(0f, 0f, 3.56f);
-                hasMoved = true;
+                //Debug.Log(gameObject.name + " MOVING NOW");
+
+                if (transform.position.z >= 0f) 
+                {
+                    hasMoved = true;
+                }
+
+                transform.position += new Vector3(0f, 0f, 0.01f);
+                
             }
         }
         else
@@ -49,9 +59,8 @@ public class MoveShelf1 : CAVE2Interactable
         isPointing = false; // reset every frame
     }
 
-    public new void OnWandPointing(CAVE2.WandEvent playerInfo)
+    void OnWandPointing(CAVE2.WandEvent playerInfo)
     {
-        base.OnWandPointing(playerInfo);
         isPointing = true; // only true if ray hits shelf this frame
     }
 }
