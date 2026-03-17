@@ -49,8 +49,9 @@ public class MoveShelf1 : CAVE2Interactable
         isPointing = false; // reset every frame
     }
 
-    void OnWandPointing(CAVE2.WandEvent playerInfo)
+    public new void OnWandPointing(CAVE2.WandEvent playerInfo)
     {
+        base.OnWandPointing(playerInfo);
         isPointing = true; // only true if ray hits shelf this frame
     }
 }

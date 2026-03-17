@@ -68,8 +68,9 @@ public class MoveGrocery : CAVE2Interactable
         }
     }
 
-    void OnWandPointing(CAVE2.WandEvent playerInfo)
+    public new void OnWandPointing(CAVE2.WandEvent playerInfo)
     {
+        base.OnWandPointing(playerInfo);
         isHovered = true;
     }
 }

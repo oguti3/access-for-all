@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.6270331, g: 0.7086393, b: 0.74822444, a: 1}
+  m_IndirectSpecularColor: {r: 0.62703335, g: 0.70864004, b: 0.74822557, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -92915,7 +92915,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4000012806552110, guid: c1621f4dd1e8c2748a5a423aa7736d55, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.2
+      value: -88.25
       objectReference: {fileID: 0}
     - target: {fileID: 4000012806552110, guid: c1621f4dd1e8c2748a5a423aa7736d55, type: 3}
       propertyPath: m_LocalPosition.y
@@ -92923,7 +92923,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4000012806552110, guid: c1621f4dd1e8c2748a5a423aa7736d55, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -163.42
+      value: -145.66
       objectReference: {fileID: 0}
     - target: {fileID: 4000012806552110, guid: c1621f4dd1e8c2748a5a423aa7736d55, type: 3}
       propertyPath: m_LocalRotation.x
@@ -224898,6 +224898,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timerText: {fileID: 1249032835}
   remainingTime: 30
+  countingUp: 0
+  infinityThreshold: 40
+  isInf: 0
 --- !u!114 &1249032835
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -225093,9 +225096,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbac4e0bbcac784c9d8b8cf64c662d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wandPointing: 0
+  wandTouching: 0
   normalColor: {r: 1, g: 0, b: 0.0586915, a: 1}
   hoverColor: {r: 0, g: 1, b: 0, a: 1}
-  hoveredFontSize: 100
+  hoveredFontSize: 36
 --- !u!65 &1249032841
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -225107,7 +225112,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 9.926751, y: 2.6581395, z: 0.000000036980005}
+  m_Size: {x: 12.926751, y: 9.658139, z: 0.000000036980005}
   m_Center: {x: -4.9633756, y: 0.4758993, z: -0.000000018490002}
 --- !u!1001 &1249083399
 PrefabInstance:
