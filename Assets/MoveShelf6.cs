@@ -8,12 +8,17 @@ public class MoveShelf6 : CAVE2Interactable
     bool hasMoved, isPointing, startMovement = false; // back to manual flag
     public GameObject useless;
     WandPointer wandPointer;
+    public GameObject invisibleWall;
 
     void Start()
     {
         if (useless != null)
         {
             useless.gameObject.SetActive(false);
+        }
+        if (invisibleWall != null)
+        {
+            invisibleWall.gameObject.SetActive(true);
         }
         transform.position += new Vector3(4.8f, 0f, 0f);
         wandPointer = FindObjectOfType<WandPointer>();
@@ -48,6 +53,7 @@ public class MoveShelf6 : CAVE2Interactable
                 if (transform.position.x <= -22.7f)
                 {
                     useless.gameObject.SetActive(true);
+                    invisibleWall.gameObject.SetActive(false);
                     hasMoved = true;
                 } else
                 {

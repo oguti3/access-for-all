@@ -9,6 +9,10 @@ TagManager:
   - burden
   - broken
   - slow
+  - useless
+  - obstacle
+  - worthless
+  - normal
   layers:
   - Default
   - TransparentFX
