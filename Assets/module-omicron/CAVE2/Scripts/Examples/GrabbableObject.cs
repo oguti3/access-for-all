@@ -34,7 +34,7 @@ public class GrabbableObject : CAVE2Interactable {
 
     [SerializeField]
     bool grabbed;
-
+    public bool IsGrabbed => grabbed;
     [SerializeField]
     CAVE2.Button grabButton = CAVE2.Button.Button3;
 
