@@ -271,6 +271,7 @@ public class GrabbableObject : CAVE2Interactable {
         grabbed = true;
     }
 
+
     void OnWandGrabRelease()
     {
         grabber.GetComponentInChildren<CAVE2WandInteractor>().ReleaseObject(gameObject);
@@ -294,6 +295,13 @@ public class GrabbableObject : CAVE2Interactable {
         wasGrabbed = true;
     }
 
+    public void ForceRelease()
+    {
+        if (grabbed)
+        {
+            OnWandGrabRelease();
+        }
+    }
 
     private void OnCollisionEnter(Collision collision)
     {

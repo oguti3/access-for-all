@@ -4,22 +4,22 @@ public class EmotionClash : MonoBehaviour
 {
     public string targetTag;
     public int maxCount = 5;
-    public GameObject invisibleWall;
-    public GameObject person;
-    public GrabbableObject grabbable;   // assign in Inspector
-
+    public GameObject ableist;
+    public GameObject ally;
+    public GrabbableObject grabbable;   
     int count = 0;
     Vector3 startPosition;
     Quaternion startRotation;
     Rigidbody rb;
     bool lastGrabbedState;
+    bool successfulClash;
 
     void Awake()
     {
         startPosition = transform.position;
         startRotation = transform.rotation;
         rb = GetComponent<Rigidbody>();
-
+        successfulClash = false;
         rb.isKinematic = true;
         rb.useGravity = false;
         rb.constraints = RigidbodyConstraints.None;
@@ -29,7 +29,10 @@ public class EmotionClash : MonoBehaviour
 
     void Update()
     {
-        if (grabbable == null) return;
+        if (successfulClash || grabbable == null)
+        {
+            return;
+        }
 
         bool currentGrabbed = grabbable.IsGrabbed;
 
@@ -52,53 +55,53 @@ public class EmotionClash : MonoBehaviour
 
     void OnCollisionStay(Collision collision)
     {
-        if (collision.gameObject.CompareTag(targetTag))
+        Debug.Log(collision.gameObject.CompareTag(targetTag));
+        if (!collision.gameObject.CompareTag(targetTag))
+        {
+            Debug.Log("target tag: " + targetTag);
+            Debug.Log("found tag: " + collision.gameObject.tag);
+        }
+        if (!successfulClash && collision.gameObject.CompareTag(targetTag))
         {
             count++;
 
             if (count >= maxCount)
             {
                 // Clash successful
+                Debug.Log("clash successful");
+                if(grabbable.IsGrabbed)
+                {
+                    grabbable.ForceRelease();
+                }
                 collision.gameObject.SetActive(false);
                 rb.velocity = Vector3.zero;
                 rb.angularVelocity = Vector3.zero;
                 gameObject.SetActive(false);
-
-                if (invisibleWall != null) invisibleWall.SetActive(false);
-                if (person != null)
+                if (ableist != null && ally != null)
                 {
-                    Transform child = transform.GetChild(0);
-                    child.SetParent(null);
-                    child.gameObject.SetActive(true);
-                    person.SetActive(false);
+                    ableist.SetActive(false);
+                    ally.SetActive(true);
                 }
+                successfulClash = true;
             }
         }
     }
 
     void OnCollisionExit(Collision collision)
     {
-        if (collision.gameObject.CompareTag(targetTag))
+
+        if (!successfulClash && collision.gameObject.CompareTag(targetTag))
         {
-            if (count < maxCount)
-            {
-                // Clash failed – reset and freeze
-                rb.isKinematic = true;
-
-                transform.position = startPosition;
-                transform.rotation = startRotation;
-
-                rb.velocity = Vector3.zero;
-                rb.angularVelocity = Vector3.zero;
-            }
-
             count = 0;
         }
     }
 
     public void OnGrabbed()
     {
-        rb.isKinematic = false;
-        rb.constraints = RigidbodyConstraints.None;
+        if (!successfulClash)
+        {
+            rb.isKinematic = false;
+            rb.constraints = RigidbodyConstraints.None;
+        }
     }
 }
