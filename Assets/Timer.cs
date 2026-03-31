@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Events;
 using TMPro;
 
 public class Timer : MonoBehaviour
@@ -8,6 +9,10 @@ public class Timer : MonoBehaviour
     public bool countingUp = false;
     [SerializeField] float infinityThreshold = 40f;
     public bool isInf = false;
+
+    public UnityEvent OnTimerEnd;
+
+    private bool hasEnded = false;
 
     void Update()
     {
@@ -23,14 +28,19 @@ public class Timer : MonoBehaviour
         }
         else
         {
-            remainingTime = 0;
+            if (!hasEnded)
+            {
+                hasEnded = true;
+                remainingTime = 0;
+                OnTimerEnd?.Invoke();
+            }
         }
 
         if (remainingTime >= infinityThreshold)
         {
             timerText.text = "\u221E";
             timerText.fontSize = 100f;
-           isInf = true;
+            isInf = true;
         }
         else
         {

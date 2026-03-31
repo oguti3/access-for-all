@@ -22,6 +22,6 @@ public class EnterGroceryStore : MonoBehaviour
             player.transform.position = teleportDestination.position;
             player.transform.rotation = teleportDestination.rotation;
         }
-        AudioManager.instance.ChangeAudio(newAudio, 0.5f); // stop old audio immediately
+        //AudioManager.instance.ChangeAudio(newAudio, 0.5f); // stop old audio immediately
     }
 }
