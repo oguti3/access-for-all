@@ -7,7 +7,11 @@ public class MoveShelf6 : CAVE2Interactable
     int count = 0;
     bool hasMoved, isPointing, startMovement = false; // back to manual flag
     public GameObject useless;
+    public GameObject problem;
+    public GameObject fix;
+    public GameObject obstacle;
     WandPointer wandPointer;
+    Vector3 normalPosition;
     public GameObject invisibleWall;
 
     void Start()
@@ -16,10 +20,23 @@ public class MoveShelf6 : CAVE2Interactable
         {
             useless.gameObject.SetActive(false);
         }
+        if (problem != null)
+        {
+            problem.gameObject.SetActive(false);
+        }
+        if (fix != null)
+        {
+            fix.gameObject.SetActive(false);
+        }
+        if (obstacle != null)
+        {
+            obstacle.gameObject.SetActive(false);
+        }
         if (invisibleWall != null)
         {
             invisibleWall.gameObject.SetActive(true);
         }
+        normalPosition = transform.position;
         transform.position += new Vector3(4.8f, 0f, 0f);
         wandPointer = FindObjectOfType<WandPointer>();
 
@@ -50,14 +67,17 @@ public class MoveShelf6 : CAVE2Interactable
             else
             {
                 //Debug.Log(gameObject.name + " MOVING NOW");
-                if (transform.position.x <= -22.7f)
+                if (transform.position.x <= normalPosition.x)
                 {
                     useless.gameObject.SetActive(true);
+                    problem.gameObject.SetActive(true);
+                    fix.gameObject.SetActive(true);
+                    obstacle.gameObject.SetActive(true);
                     invisibleWall.gameObject.SetActive(false);
                     hasMoved = true;
                 } else
                 {
-                    transform.position -= new Vector3(0.01f, 0f, 0f);
+                    transform.position -= new Vector3(2f * Time.deltaTime, 0f, 0f);
                 }
 
             }

@@ -34,7 +34,7 @@ public class AbleistMovement : MonoBehaviour
             return;
         }
 
-        //Debug.Log("ShelfPosition-Z: " + shelfScript.transform.position.z);
+   
 
         if (shelfScript.hasMoved)
         {

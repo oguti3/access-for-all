@@ -6,7 +6,8 @@ public class EmotionClash : MonoBehaviour
     public int maxCount = 5;
     public GameObject ableist;
     public GameObject ally;
-    public GrabbableObject grabbable;   
+    public GrabbableObject grabbable;
+    public FloatingText floating;
     int count = 0;
     Vector3 startPosition;
     Quaternion startRotation;
@@ -49,6 +50,7 @@ public class EmotionClash : MonoBehaviour
             rb.velocity = Vector3.zero;
             rb.angularVelocity = Vector3.zero;
             count = 0;
+            floating.shouldFloat = true;
         }
         lastGrabbedState = currentGrabbed;
     }
@@ -100,6 +102,10 @@ public class EmotionClash : MonoBehaviour
     {
         if (!successfulClash)
         {
+            if(floating != null)
+            {
+                floating.shouldFloat = false;
+            }
             rb.isKinematic = false;
             rb.constraints = RigidbodyConstraints.None;
         }
