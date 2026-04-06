@@ -17,11 +17,13 @@ public class CarPatternMover : MonoBehaviour
     public float honkVolume = 1f;
 
     [Header("Pattern — define this car's steps below")]
-    public List<MoveStep> pattern = new List<MoveStep>();
+    public List<MoveStep> pattern1 = new List<MoveStep>();
+    public List<MoveStep> pattern2 = new List<MoveStep>();
 
     private CarController car;
     private AudioSource audioSource;
     private bool isRunning = false;
+    private Vector3 startPos;
 
     [System.Serializable]
     public struct MoveStep
@@ -41,6 +43,7 @@ public class CarPatternMover : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
         if (audioSource == null)
             audioSource = gameObject.AddComponent<AudioSource>();
+        startPos = car.transform.position;
     }
 
     void Start()
@@ -57,11 +60,11 @@ public class CarPatternMover : MonoBehaviour
             timer.OnTimerEnd.RemoveListener(TriggerPattern);
     }
 
-    private IEnumerator RunPattern()
+    private IEnumerator RunPattern(List<MoveStep> cPattern)
     {
         do
         {
-            foreach (MoveStep step in pattern)
+            foreach (MoveStep step in cPattern)
                 yield return StartCoroutine(ExecuteStep(step));
         }
         while (loopPattern);
@@ -119,7 +122,10 @@ public class CarPatternMover : MonoBehaviour
         if (isRunning) return;
         isRunning = true;
         Honk();
-        StartCoroutine(RunPattern());
+        if (car.transform.position == startPos)
+            StartCoroutine(RunPattern(pattern1));
+        else
+            StartCoroutine(RunPattern(pattern2));
     }
 
     public void Honk()

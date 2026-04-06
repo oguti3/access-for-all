@@ -6,6 +6,7 @@ public class PlayerCarCollision : MonoBehaviour
 
 {
     public string targetTag;
+    public Transform target = null;
     public Vector3 startingPosition;
 
     void Start()
@@ -13,10 +14,17 @@ public class PlayerCarCollision : MonoBehaviour
         startingPosition = transform.position;
     }
 
-    void OnCollisionStay(Collision collision)
+    void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.CompareTag(targetTag))
+        Debug.Log(other.gameObject.CompareTag(targetTag));
+        if (!other.gameObject.CompareTag(targetTag))
         {
+            Debug.Log("target tag: " + targetTag);
+            Debug.Log("found tag: " + other.gameObject.tag);
+        }
+        if (other.gameObject.tag == "car")
+        {
+            Debug.Log("collision successful");
             this.transform.position = startingPosition;
         }
     }
