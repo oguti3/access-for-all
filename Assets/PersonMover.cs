@@ -7,6 +7,7 @@ using System.Collections;
 /// Tweak Speed and Distance per person in the Inspector to position them
 /// naturally along the path at the right moment.
 /// </summary>
+/// 
 public class PersonMover : MonoBehaviour
 {
     [Header("Movement Settings")]

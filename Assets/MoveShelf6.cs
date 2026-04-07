@@ -5,7 +5,8 @@ using UnityEngine;
 public class MoveShelf6 : CAVE2Interactable
 {
     int count = 0;
-    bool hasMoved, isPointing, startMovement = false; // back to manual flag
+    public bool hasMoved;
+    bool isPointing, startMovement = false; // back to manual flag
     public GameObject useless;
     public GameObject problem;
     public GameObject fix;
