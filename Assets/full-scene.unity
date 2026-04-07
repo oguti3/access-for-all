@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.62703323, g: 0.7086396, b: 0.7482247, a: 1}
+  m_IndirectSpecularColor: {r: 0.6270331, g: 0.7086393, b: 0.74822444, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -92660,6 +92660,97 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000012607288206, guid: c1621f4dd1e8c2748a5a423aa7736d55, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013620782116, guid: c1621f4dd1e8c2748a5a423aa7736d55, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011952582294, guid: c1621f4dd1e8c2748a5a423aa7736d55,
+        type: 3}
+      propertyPath: m_Text
+      value: Use the joystick to move around the environment. Press L2 to use the
+        device and change the surroundings to make them more accessible. For example,
+        point the laser at the walk signal to increase the remaining time.
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010683909002, guid: c1621f4dd1e8c2748a5a423aa7736d55,
+        type: 3}
+      propertyPath: m_Text
+      value: "The player will then proceed left down the cross walk towards the grocery
+        store. Inside the grocery store we see another quite common obstacle a wheelchair
+        bound person may face which is aisles being too small. In such cases the person
+        would have to wait for people to make space for them or face animosity from
+        the other customers and have to deal with negative experiences when running
+        an errand as simple as getting groceries.\n\nWith our proposed device the
+        disabled person would be able to change the width of the aisles by moving
+        racks automatically. This would create space for them to move through the
+        store with far more ease and avoid causing any distaurbance to the other customers'
+        experience keeping everyone safe and happy. \n\nChange is always difficult.
+        It is something that has been proven time and time again in the past when
+        inclusivity or equality have been in question. The device won't make everything
+        100% better on a societal base but it will definitely reduce the friction
+        or discomfort the disabled person may face for trying to make their lives
+        better."
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011111918770, guid: c1621f4dd1e8c2748a5a423aa7736d55,
+        type: 3}
+      propertyPath: m_Text
+      value: "This project intends to address the UN Sustainable Development Goal
+        of Reduced Inequalities. As reported by the UN, disabled people face discrimination
+        at 28% compared to the 17% for ablebodied people.\n\nAccessibility is an issue
+        that affects countless people across the world. Unfortunately, the world is
+        not always made to accomodate such people. This can not only put disabled
+        people in danger during emergencies, but also make their daily lives unreasonably
+        dangerous or difficult.\n\nFor this reason, we propose a device that can be
+        used as a universal detector to manipulate the systems around us to make it
+        more accessible for everyone and seamlessly integrating society for the ablebodied
+        and the disabled alike. \n\nThe first scene starts with the player being a
+        person using a wheelchair. They are meant to cross the sidewalk before the
+        walk timer runs out while others cross at the same time. In reality, the person
+        may face hostility as cars have to wait while they cross if they are unable
+        to cross in time. Another more dangerous possibility would be for them be
+        hit by a car that may not be paying attention. The device proposed allows
+        the player to increase the timer time as much as they need to cross the road
+        safely.\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011641407824, guid: c1621f4dd1e8c2748a5a423aa7736d55,
+        type: 3}
+      propertyPath: m_Text
+      value: 'CS 427 - Creative Coding
+
+        Spring 2026
+
+        University of Illinois at Chicago'
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010541511360, guid: c1621f4dd1e8c2748a5a423aa7736d55,
+        type: 3}
+      propertyPath: m_Text
+      value: Access For All
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000013534834098, guid: c1621f4dd1e8c2748a5a423aa7736d55,
+        type: 3}
+      propertyPath: m_Text
+      value: "Accessibility is an issue that affects countless people across the world.
+        Unfortunately, the world is not always made to accomodate such people. This
+        can not only put disabled people in danger during emergencies, but also make
+        their daily lives unreasonably dangerous or difficult.\n\nFor this reason,
+        we propose a device that can be used as a universal detector to manipulate
+        the systems around us to make it more accessible for everyone and seamlessly
+        integrating society for the ablebodied and the disabled alike. \n\r\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011468825520, guid: c1621f4dd1e8c2748a5a423aa7736d55,
+        type: 3}
+      propertyPath: m_Text
+      value: 'Owen Gutierrez
+
+        Darshan Zaware
+
+        Esteban Sanz
+
+        David Ortiz'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c1621f4dd1e8c2748a5a423aa7736d55, type: 3}
