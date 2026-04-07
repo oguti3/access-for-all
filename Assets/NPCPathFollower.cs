@@ -6,7 +6,7 @@ public class NPCPathFollower : MonoBehaviour
     public float speed = 3f;
     public float reachDistance = 0.2f;
 
-    private int currentWaypointIndex = 0;
+    private int currentWaypointIndex = 1;
 
     void Update()
     {
@@ -21,6 +21,7 @@ public class NPCPathFollower : MonoBehaviour
         if (direction != Vector3.zero)
         {
             transform.forward = direction;
+            transform.Rotate(0, 0, 90);
         }
 
         // Check if reached waypoint
@@ -30,7 +31,8 @@ public class NPCPathFollower : MonoBehaviour
 
             if (currentWaypointIndex >= waypoints.Length)
             {
-                currentWaypointIndex = 0; // loop path (or remove this to stop)
+                transform.position = waypoints[0].position;
+                currentWaypointIndex = 0;
             }
         }
     }
