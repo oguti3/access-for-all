@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.6270331, g: 0.7086393, b: 0.74822444, a: 1}
+  m_IndirectSpecularColor: {r: 0.62703323, g: 0.7086396, b: 0.7482247, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -92621,6 +92621,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Untagged
       objectReference: {fileID: 0}
+    - target: {fileID: 1000012607288206, guid: c1621f4dd1e8c2748a5a423aa7736d55, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3846665878385025357, guid: c1621f4dd1e8c2748a5a423aa7736d55,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -92656,18 +92660,14 @@ PrefabInstance:
       propertyPath: laserActivated
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1000013620782116, guid: c1621f4dd1e8c2748a5a423aa7736d55, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 232291504689222494, guid: c1621f4dd1e8c2748a5a423aa7736d55,
         type: 3}
       propertyPath: m_IsActive
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1000012607288206, guid: c1621f4dd1e8c2748a5a423aa7736d55, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1000013620782116, guid: c1621f4dd1e8c2748a5a423aa7736d55, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114000011952582294, guid: c1621f4dd1e8c2748a5a423aa7736d55,
         type: 3}
@@ -92688,12 +92688,12 @@ PrefabInstance:
         disabled person would be able to change the width of the aisles by moving
         racks automatically. This would create space for them to move through the
         store with far more ease and avoid causing any distaurbance to the other customers'
-        experience keeping everyone safe and happy. \n\nChange is always difficult.
-        It is something that has been proven time and time again in the past when
-        inclusivity or equality have been in question. The device won't make everything
-        100% better on a societal base but it will definitely reduce the friction
-        or discomfort the disabled person may face for trying to make their lives
-        better."
+        experience keeping everyone safe and happy. \n\nChange is always difficult,
+        but it is never impossible. The device we propose in our project doesn't and
+        can't exist, but societal and personal changes can still have just as profound
+        of an effect on those with disabilties. These changes won't be as quick or
+        as easy to make as we do with our device, but they are necessary if we want
+        to create an accessible society."
       objectReference: {fileID: 0}
     - target: {fileID: 114000011111918770, guid: c1621f4dd1e8c2748a5a423aa7736d55,
         type: 3}
