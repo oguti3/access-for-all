@@ -11,6 +11,7 @@ public class MoveShelf6 : CAVE2Interactable
     public GameObject problem;
     public GameObject fix;
     public GameObject obstacle;
+    public GameObject ableist;
     WandPointer wandPointer;
     Vector3 normalPosition;
     public GameObject invisibleWall;
@@ -36,6 +37,10 @@ public class MoveShelf6 : CAVE2Interactable
         if (invisibleWall != null)
         {
             invisibleWall.gameObject.SetActive(true);
+        }
+        if(ableist != null)
+        {
+            ableist.gameObject.SetActive(false);
         }
         normalPosition = transform.position;
         transform.position += new Vector3(4.8f, 0f, 0f);
@@ -75,6 +80,7 @@ public class MoveShelf6 : CAVE2Interactable
                     fix.gameObject.SetActive(true);
                     obstacle.gameObject.SetActive(true);
                     invisibleWall.gameObject.SetActive(false);
+                    ableist.SetActive(true);
                     hasMoved = true;
                 } else
                 {

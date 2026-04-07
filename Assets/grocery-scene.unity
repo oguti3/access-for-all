@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.43667895, g: 0.48427355, b: 0.564525, a: 1}
+  m_IndirectSpecularColor: {r: 0.43667918, g: 0.48427397, b: 0.5645253, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3580,6 +3580,7 @@ MonoBehaviour:
   problem: {fileID: 850776420668055134}
   fix: {fileID: 1348173781}
   obstacle: {fileID: 1027164819852543951}
+  ableist: {fileID: 1849348318}
   invisibleWall: {fileID: 1311688480}
 --- !u!1001 &254660470
 PrefabInstance:
@@ -4807,7 +4808,7 @@ GameObject:
   - component: {fileID: 336680309}
   - component: {fileID: 336680308}
   m_Layer: 0
-  m_Name: Plane
+  m_Name: exit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4895,8 +4896,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 336680307}
   m_LocalRotation: {x: 0.50000006, y: -0.50000006, z: 0.5, w: 0.5}
-  m_LocalPosition: {x: 24.07, y: 5.02, z: -3.19}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 24.5, y: 1.53, z: -5.31}
+  m_LocalScale: {x: 0.36837876, y: 1, z: 0.29543737}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 14
@@ -5313,6 +5314,10 @@ MonoBehaviour:
   a2: {fileID: 172600146}
   a3: {fileID: 1069010150}
   a4: {fileID: 140580736}
+  pos1: {fileID: 947616627}
+  pos2: {fileID: 931688293}
+  pos3: {fileID: 672917519}
+  pos4: {fileID: 1181073939}
   aw1: {fileID: 497047255}
   p1: {fileID: 2068688079}
   p2: {fileID: 295535526}
@@ -9694,7 +9699,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4000013691190774, guid: 24793f63f3c0964458f46a205073d4a0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4000013691190774, guid: 24793f63f3c0964458f46a205073d4a0, type: 3}
       propertyPath: m_LocalPosition.z

@@ -17,6 +17,10 @@ public class AbleistMovement2 : MonoBehaviour
     public GameObject a2;
     public GameObject a3;
     public GameObject a4;
+    public GameObject pos1;
+    public GameObject pos2;
+    public GameObject pos3;
+    public GameObject pos4;
     public GameObject aw1;
     public GameObject p1;
     public GameObject p2;
@@ -30,6 +34,10 @@ public class AbleistMovement2 : MonoBehaviour
         a3.gameObject.SetActive(false);
         a4.gameObject.SetActive(false);
         aw1.gameObject.SetActive(false);
+        pos1.gameObject.SetActive(false); 
+        pos2.gameObject.SetActive(false);
+        pos3.gameObject.SetActive(false);
+        pos4.gameObject.SetActive(false);
         p1.gameObject.GetComponent<AbleistToAlly>().enabled = false;
         p2.gameObject.GetComponent<AbleistToAlly>().enabled = false;
         p3.gameObject.GetComponent<AbleistToAlly>().enabled = false;
@@ -61,7 +69,11 @@ public class AbleistMovement2 : MonoBehaviour
                     a2.gameObject.SetActive(true);
                     a3.gameObject.SetActive(true);
                     a4.gameObject.SetActive(true);
-                    aw1.gameObject.SetActive(true);
+                    pos1.gameObject.SetActive(true);
+                    pos2.gameObject.SetActive(true);
+                    pos3.gameObject.SetActive(true);
+                    pos4.gameObject.SetActive(true);
+                    aw1.gameObject.SetActive(true);    
                     p1.gameObject.GetComponent<AbleistToAlly>().enabled = true;
                     p2.gameObject.GetComponent<AbleistToAlly>().enabled = true;
                     p3.gameObject.GetComponent<AbleistToAlly>().enabled = true;
